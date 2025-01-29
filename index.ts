@@ -1,6 +1,9 @@
-import express, { Request, Response } from "express";
-import cors from "cors";
-import dotenv from "dotenv";
+import { Request, Response } from "express";
+
+const express = require("express");
+const cors = require("cors");
+const dotenv = require('dotenv');
+
 
 dotenv.config();
 
@@ -11,9 +14,9 @@ app.use(cors());
 
 app.get("/", (req: Request, res: Response) => {
     return res.status(200).json({
-        slack_email: "lanre2967@gmail.com",
-        timestamp: new Date().toISOString(),
-        github_url: "https://github.com/yourusername/hng12-backend",
+        email: "lanre2967@gmail.com",
+        current_datetime: new Date().toISOString(),
+        github_url: "https://github.com/Lanre290/HNG-12-stage-0",
     });
 });
 
